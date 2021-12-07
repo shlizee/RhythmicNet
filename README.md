@@ -23,14 +23,34 @@ RhythmicNet contains three major components:
 
 The components are shown in the figure above. We describe each component separately below.
 
+<div align="center">
+    <img src="assets/img/system_overview.png" width=100% style="no-border;margin-left:0px;">
+    <font size=2>System overview of RhythmicNet.</font>
+</div>
+
 ### Beat prediction + Style Extraction (Video2Rhythm)
+
+<div align="center">
+    <img src="assets/img/video2rhythm.png" width=70% style="no-border;margin-left:0px;">
+</div>
+
+
 We decompose the rhythm into two streams: beats and style. We propose a novel model to predict music beats and a kinematic offsets based approach to extract style patterns from human movements. Beat is a binary periodic signal determined by fixed tempo, and it is obtained by music beat prediction network, which learns the beat by pairing body keypoints with ground truth music beats in a supervised way. We propose a novel graph-based attention model that can well capture the regular pattern of beats from human body movements. In addition to beats, irregular patterns also exist in the rhythm, which is also called style. To extract style, we represent the changing motions as kinematic offsets, and apply spectral analysis technique on top of it to extract frames with fast-changing motions, which is the style pattern. By combining beats and style, we get the rhythm.
 
 ### Drum Music Generation Based on Music Rhythm (Rhythm2Drum)
 
+
+<div align="center">
+    <img src="assets/img/rhythm2drum.png" width=80% style="no-border;margin-left:0px;">
+</div><br>
+
 Rhythm2Drum interprets the provided rhythm from previous stage into drum sounds. Each drum track can be represented by three matrices: hits, velocities, and offsets. The hits represent the presence of drum onsets, velocity represents the loudness of hits, and offsets represent the time shift of each hit. Rhythm2Drum contains 2 stages. In the first stage, it implements an Encoder-Decoder Transformer that given the rhythm generates the drums performance Hits (onsets). The Transformer generates natural and diverse drum onsets by autoregressively learning the hits as a word sequence conditioned on the rhythm. In the second stage, a U-net type model generates the drum Velocities and Offsets. The U-Net learns them conditioned on the Hits matrix.
 
 ### Full Music (with Piano or Guitar) generation based on Drum Track (Drum2Music)
+
+<div align="center">
+    <img src="assets/img/drum2music.png" width=80% style="no-border;margin-left:0px;">
+</div>
 
 In this last stage we add further instruments to enrich the soundtrack. Since the drum track contains rhythmic music, we propose to condition the additional instrument stream on the generated drum track. We consider the piano or guitar as the additional instruments, since these are dominant instruments. Drum2Music completes the drum music by adopting an Encoder-Decoder architecture using transformer-XL to generate a music track of either piano or guitar conditioning on the generated drum performance.
 
