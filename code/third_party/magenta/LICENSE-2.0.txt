@@ -1,0 +1,1 @@
+This codebase has not been modified from original source code. Link to the License of Magenta's official code is Apache 2.0 under https://github.com/magenta/magenta/blob/main/LICENSE

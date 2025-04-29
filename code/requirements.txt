@@ -1,0 +1,15 @@
+torch>=1.11
+numpy>=1.19.0
+opencv-python
+pretty-midi
+protobuf
+playsound
+soundfile
+librosa
+note-seq
+tqdm
+madmom
+moviepy
+ffmpeg-python
+miditoolkit
+pyfluidsynth

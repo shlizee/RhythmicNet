@@ -1,0 +1,11 @@
+This st-gcn model is based on the mm-skeleton repo by Sijie Yan.
+Changes made on 11/02/2023 for adapting to serve as one of the backbones in our `RhythmicNet' work:
+- Combine mmskeleton/ops/st_gcn/graph.py and mmskeleton/models/backbones/st_gcn_aaai18.py into st_gcn.py
+- Shrink the architecture by adjusting the channel size by a factor of 2 in st_gcn basic blocks.
+  See Line 257-266 for the modified code.
+  See https://github.com/open-mmlab/mmskeleton/blob/master/mmskeleton/models/backbones/st_gcn_aaai18.py#L66C1-L74C62
+  for the original code.
+- Adjust the adjacency matrix of the skeleton to adapt to 17 body keypoints representation.
+  See Line 43-53 for the modified code.
+  See https://github.com/open-mmlab/mmskeleton/blob/master/mmskeleton/ops/st_gcn/graph.py#L45C1-L53C28 for the original code.
+

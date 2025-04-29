@@ -1,0 +1,1 @@
+This modules.py is basically same code as https://github.com/hyunwoongko/transformer/tree/master, the license is shown at the end of the README.md in that repo.

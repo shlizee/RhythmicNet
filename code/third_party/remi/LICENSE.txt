@@ -1,0 +1,1 @@
+This codebase has not been modified from original source code. The link to the License of Remi codebase https://github.com/YatingMusic/remi/blob/master/LICENSE from the work "Pop Music Transformer: Beat-based Modeling and Generation of Expressive Pop Piano Compositions", ACM Multimedia 2020.

@@ -1,0 +1,1 @@
+In "module.py", we added new modules called "CrossAttentionDecoderLayer" (line 499) and "CrossAttentionMemTransformerLM" that serve the purpose of extending transformer-xl into encoder-decoder framework. The transformer-xl framework is originally designed as decoder-only structure with causal self-attention only.
