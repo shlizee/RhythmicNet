@@ -3,7 +3,7 @@
 (* equal contribution)
 
 ## Introduction
-This repository contains the code (coming soon) and the project page for the work **How Does it Sound? Generation of Rhythmic Soundtracks for Human Movement Videos** ([paper](https://openreview.net/pdf?id=JuNatTaGZ6J)) presented in NeurIPS 2021.
+This repository contains the code and the project page for the work **How Does it Sound? Generation of Rhythmic Soundtracks for Human Movement Videos** ([paper](https://openreview.net/pdf?id=JuNatTaGZ6J)) presented in NeurIPS 2021.
 
 **Please Turn Sound ON**
 
