@@ -23,6 +23,8 @@ Please check ``requirements.txt`` for package dependencies, and then run "pip in
 
 For "pyfluidsynth" and "pretty-midi" packages, after doing "pip install", Make sure to install "libfluidsynth-dev" as well by running "sudo apt-get install libfluidsynth-dev", then "export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7", you can then successfully "import fluidsynth, pretty_midi".
 
+Please download all checkpoints of models from [here](https://drive.google.com/file/d/1KHv90Jpbhcnjmc2koeIy0U7F_54v1eE6/view?usp=drive_link) and then extract them to `checkpoints' folder under this directory.
+
 ## Getting Started
 The entire pipeline is integrated in `inference.py` file, connecting the 3 stages from `Video2Rhythm` (`video2rhythm` folder),
 to `Rhythm2Drum` (`rhythm2drum` folder) to `Drum2Music` (`drum2music`folder). To test the inference code: 
